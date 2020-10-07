@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.navbar{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    line-height: 600%;
+}
+li{list-style-type: none;}
+li a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
+    color: #e1e6e2;
+}
+li a:hover{color: black;}
+.title{
+    font-family: 'Oswald', sans-serif;
+    color: #e1e6e2;
+    font-size: 50px;
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+h5{
+    color: #e1e6e2;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+
+}
+
+.App{
+    background: #c31432;  
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #240b36, #c31432); 
+}
