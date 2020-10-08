@@ -3,32 +3,27 @@ import React, { useState , useEffect, Component } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer'
 import './style.css'
-import MovieCard from './components/MovieCard'
+import MovieList from './components/MovieList'
+import Joker from './components/image/Joker.jpg'
+import StarWars from './components/image/star-wars.jpg'
+import TheIrishman from './components/image/the-irishman.jpg'
+import HarryPotter from './components/image/harry-potter.jpg'
 
-// const FEATURED_API : "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082aO088b18page=1" ;
-// const IMG_API : "https://image.tmdb.org/t/p/w1280" ;
-// const SEARCH_API : "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082aO088b1&query="
+function App(){
 
-class App extends Component {
-  // constructor(){
-  //   super();
-  //   this.state={
-  //     title: 'Joker' ,
-  //     description:'it is a great movie' ,
-  //     posterUrl:'/Joker.jpg' , 
-  //     rate: 8.9
-  //   }
-  // }
-
-  render(){
+      let  obj=[
+        {title: 'Joker' ,description:'psychological thriller',posterUrl: (Joker), rate: 8.9},
+        {title: 'Star Wars' ,description:'science fiction', posterUrl: (StarWars), rate: 9},
+        {title: 'The Irishman' ,description:'epic crime film',posterUrl: (TheIrishman), rate: 7},
+        {title: 'Harry Potter' ,description:'fantasy films',posterUrl: (HarryPotter), rate: 7.8},
+      ]
     return (
       <div className="App">
         <Header />
-        <MovieCard />
+        <MovieList list={obj} />
         <Footer />
       </div>
-    );
-  }  
+    ); 
 }
 
 export default App;

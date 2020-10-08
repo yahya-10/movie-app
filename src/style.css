@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+html,body{
+    background: #c31432;  
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #240b36, #c31432); 
+    font-family: 'Oswald', sans-serif;
+}
 .header{
     display: grid;
     grid-template-columns: auto auto;
@@ -16,12 +22,10 @@ li{list-style-type: none;}
 li a{
     text-decoration: none;
     letter-spacing: 1px;
-    font-family: 'Oswald', sans-serif;
     color: #e1e6e2;
 }
 li a:hover{color: black;}
 .title{
-    font-family: 'Oswald', sans-serif;
     color: #e1e6e2;
     font-size: 50px;
     margin-left: 10px;
@@ -29,13 +33,10 @@ li a:hover{color: black;}
 }
 h5{
     color: #e1e6e2;
-    font-family: 'Oswald', sans-serif;
     text-align: center;
-
 }
 
-.App{
-    background: #c31432;  
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);
-    background: linear-gradient(to right, #240b36, #c31432); 
+Card{
+    display: flex;
 }
+
