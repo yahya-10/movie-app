@@ -7,11 +7,12 @@ html,body{
     background: #c31432;  
     background: -webkit-linear-gradient(to right, #240b36, #c31432);
     background: linear-gradient(to right, #240b36, #c31432); 
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
 }
 .header{
     display: grid;
     grid-template-columns: auto auto;
+    width: 100%;
 }
 .navbar{
     display: grid;
@@ -23,20 +24,33 @@ li a{
     text-decoration: none;
     letter-spacing: 1px;
     color: #e1e6e2;
+    font-family: 'Oswald', sans-serif;
 }
 li a:hover{color: black;}
 .title{
     color: #e1e6e2;
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: bold;
     margin-left: 10px;
     letter-spacing: 2px;
+    font-family: 'Oswald', sans-serif;
 }
 h5{
-    color: #e1e6e2;
+    /* color: #e1e6e2; */
+    color: black;
     text-align: center;
 }
 
-Card{
+.movie-list{
     display: flex;
+    justify-content: space-around;
+    margin-left: 250px;
+}
+.title{
+    text-align: center;
+}
+.modal-header{
+    background: black;
+    color: white;
 }
 

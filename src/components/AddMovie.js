@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export const AddMovie = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+export default class AddMovie extends Component {
+    constructor(){
+        super();
+        this.state={
+            title:"",
+            description:"",
+            posterUrl:""
+        }
+        input:""
+    }
+    handleChange=(e)=>this.setState({input:e.target.value})
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
 }
+

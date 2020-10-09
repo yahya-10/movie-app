@@ -1,6 +1,13 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
+import { Modal , Button } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import ModalImage from '../components/image/modal-image.jpg'
 
 const Header = () => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     
     return (
         <div className="header">
@@ -9,9 +16,32 @@ const Header = () => {
                 <li><a href="#">Home</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Box Office</a></li>
-                <li><a href="#">add Movie +</a></li>
+                <li><a href="#" onClick={handleShow}>add Movie +</a></li>
             </ul>
-        </div>
+
+            <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+            <Modal.Title>Add your movie</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <img className="d-block w-100" src={ModalImage} alt="" style={{height:"100", width:"100"}}/>
+            <label for="movie title">Movie title : </label>
+            <input className="movie-title" type="text" placeholder="enter the title of the movie" /> <br />
+            <label for="movie description">Description : </label>
+            <input className="movie-description" type="text" placeholder="write the description" /> <br/>
+            <label for="homepage">Movie poster link: </label>
+            <input type="url" id="homepage" name="homepage"></input>
+            </Modal.Body>
+        <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+            Cancel
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+            Add
+            </Button>
+        </Modal.Footer>
+        </Modal>
+    </div>
     )
 }
 
