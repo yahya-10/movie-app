@@ -8,6 +8,7 @@ import Joker from './components/image/Joker.jpg'
 import StarWars from './components/image/star-wars.jpg'
 import TheIrishman from './components/image/the-irishman.jpg'
 import HarryPotter from './components/image/harry-potter.jpg'
+import TheMatrix from './components/image/the-matrix.jpg'
 
 function App(){
 
@@ -16,13 +17,16 @@ function App(){
         {title: 'Star Wars' ,description:'science fiction', posterUrl: (StarWars)},
         {title: 'The Irishman' ,description:'epic crime film',posterUrl: (TheIrishman)},
         {title: 'Harry Potter' ,description:'fantasy films',posterUrl: (HarryPotter)},
+        {title: 'The Matrix' ,description:'science fiction action',posterUrl: (TheMatrix)}
       ]
     return (
       <div className="App">
         <Header />
+        <div className="list-filter">
+        <Filter className="filter-field" />
         <MovieList list={obj} />
-        <Filter />
-        {/* <Footer /> */}
+        </div>
+        <Footer />
       </div>
     ); 
 }

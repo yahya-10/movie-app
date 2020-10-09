@@ -17,10 +17,11 @@ const Filter = () => {
     return (
         <div>
             <input type="text" placeholder="search"/>
-            <button onClick={ e => setSearch(e.target.value)}>search</button>
+            <button onClick={ e => setSearch(e.target.value)}><i className="fas fa-search"></i></button><br/>
             {filteredMovies.map((movie, idx)=>(
                 <MovieCard key={idx} {...movie} />
             ))}
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
     )
 }

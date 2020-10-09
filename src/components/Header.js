@@ -23,16 +23,16 @@ const Header = () => {
         <Modal.Header closeButton>
             <Modal.Title>Add your movie</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="modal-body">
             <img className="d-block w-100" src={ModalImage} alt="" style={{height:"100", width:"100"}}/>
             <label for="movie title">Movie title : </label>
-            <input className="movie-title" type="text" placeholder="enter the title of the movie" /> <br />
+            <input style={{marginTop:"10px"}} className="movie-title" type="text" placeholder=" write the title" /> <br />
             <label for="movie description">Description : </label>
-            <input className="movie-description" type="text" placeholder="write the description" /> <br/>
+            <input className="movie-description" type="text" placeholder=" write the description" /> <br/>
             <label for="homepage">Movie poster link: </label>
-            <input type="url" id="homepage" name="homepage"></input>
+            <input type="url" id="url" name="link" placeholder=" enter valid link"></input>
             </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="modal-footer">
             <Button variant="secondary" onClick={handleClose}>
             Cancel
             </Button>

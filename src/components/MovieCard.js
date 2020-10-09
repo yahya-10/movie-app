@@ -7,7 +7,7 @@ export default function MovieCard({card}) {
 
     return (
             <div className="movie-card">
-                <CardDeck>
+                <CardDeck style={{margin:10}}>
                     <Card>
                         <Card.Img variant="top" src={card.posterUrl} style={{height:"300px",width:"200px"}} />
                         <Card.Body>
