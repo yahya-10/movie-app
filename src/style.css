@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 html,body{
-    background: #c31432;  
+    /* background: #c31432;  
     background: -webkit-linear-gradient(to right, #240b36, #c31432);
-    background: linear-gradient(to right, #240b36, #c31432); 
-    /* font-family: 'Oswald', sans-serif; */
+    background: linear-gradient(to right, #240b36, #c31432);  */
+    background: black;
 }
 .header{
     display: grid;
@@ -26,7 +26,7 @@ li a{
     color: #e1e6e2;
     font-family: 'Oswald', sans-serif;
 }
-li a:hover{color: black;}
+li a:hover{color: #0033FF;}
 .title{
     color: #e1e6e2;
     font-size: 60px;
@@ -36,16 +36,23 @@ li a:hover{color: black;}
     font-family: 'Oswald', sans-serif;
 }
 h5{
-    /* color: #e1e6e2; */
-    color: black;
+    color: #e1e6e2;
+    /* color: black; */
     text-align: center;
+    font-size: 10px;
 }
+.card{
+    border: 1px solid black;
+    transition: .2s ease;
+}
+.card:hover{border: 2px solid #0033FF;
+            transform: scale(1.05);}
 
 .movie-list{
     display: flex;
     justify-content: space-between;
     /* margin-left: 250px; */
-    margin: 0 20px 10px 20px;
+    margin: 0 20px 10px 200px;
     flex-wrap: wrap;
 }
 .title{
@@ -63,10 +70,12 @@ h5{
 .modal-footer{
     background-color: black;
 }
-.list-filter{
+/* .list-filter{
     display: flex;
-}
-.filter-field{
-    position: fixed;
-}
+} */
+/* .filter-field{
+    width: 100%;
+    position: sticky;
+    background-color: #6a6b6b;
+} */
 

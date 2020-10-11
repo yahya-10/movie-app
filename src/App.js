@@ -9,22 +9,23 @@ import StarWars from './components/image/star-wars.jpg'
 import TheIrishman from './components/image/the-irishman.jpg'
 import HarryPotter from './components/image/harry-potter.jpg'
 import TheMatrix from './components/image/the-matrix.jpg'
+import AddMovie from './components/AddMovie'
 
 function App(){
 
       let  obj=[
         {title: 'Joker' ,description:'psychological thriller',posterUrl: (Joker)},
-        {title: 'Star Wars' ,description:'science fiction', posterUrl: (StarWars)},
-        {title: 'The Irishman' ,description:'epic crime film',posterUrl: (TheIrishman)},
-        {title: 'Harry Potter' ,description:'fantasy films',posterUrl: (HarryPotter)},
-        {title: 'The Matrix' ,description:'science fiction action',posterUrl: (TheMatrix)}
+        {title: 'Star Wars' ,description:'Science fiction', posterUrl: (StarWars)},
+        {title: 'The Irishman' ,description:'Epic crime film',posterUrl: (TheIrishman)},
+        {title: 'Harry Potter' ,description:'Fantasy films',posterUrl: (HarryPotter)},
+        {title: 'The Matrix' ,description:'Science fiction action',posterUrl: (TheMatrix)}
       ]
     return (
       <div className="App">
         <Header />
         <div className="list-filter">
         <Filter className="filter-field" />
-        <MovieList list={obj} />
+        <MovieList list={obj}/>
         </div>
         <Footer />
       </div>

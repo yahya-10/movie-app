@@ -4,19 +4,19 @@ export default class AddMovie extends Component {
     constructor(){
         super();
         this.state={
-            title:"",
-            description:"",
-            posterUrl:""
+            input:''
         }
-        input:""
     }
+
     handleChange=(e)=>this.setState({input:e.target.value})
     render() {
         return (
             <div>
-                
+                <input type='text' onChange={this.handleChange} />
+                <span>{this.state.input}</span>
             </div>
         )
     }
 }
+
 

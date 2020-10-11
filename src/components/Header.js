@@ -2,13 +2,13 @@ import React, {useState,useEffect} from 'react'
 import { Modal , Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ModalImage from '../components/image/modal-image.jpg'
-
+// import AddMovie from './AddMovie'
 const Header = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    
+
     return (
         <div className="header">
             <h2 className="title">MovieGoat</h2>
@@ -19,7 +19,7 @@ const Header = () => {
                 <li><a href="#" onClick={handleShow}>add Movie +</a></li>
             </ul>
 
-            <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
             <Modal.Title>Add your movie</Modal.Title>
         </Modal.Header>
