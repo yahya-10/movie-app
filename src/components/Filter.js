@@ -1,22 +1,26 @@
-import React, {list,useEffect, useState} from 'react'
+import React, {Component, list,useEffect, useState} from 'react'
 import ReactStars from 'react-rating-stars-component';
 
-let  movies=['Joker' ,'Star Wars' ,'The Irishman' ,'Harry Potter' ,
-            'The Matrix']
-
-const Filter = () => {
-    const[searchMovie, setSearchMovie] = React.useState("");
-    const[searchResults, setSearchResults] = React.useState([]);
-    const handleChange = e =>{
-        setSearchMovie(e.target.value);
-    };
-    React.useEffect(()=>{
-        const results = movies.filter(el =>
-            el.toString().toLowerCase().includes(searchMovie)
-        );
-        setSearchResults(results);
-    }, [searchMovie])
-
+class Filter extends Component{
+    constructor(props){
+        super(props);
+        this.state=
+        {
+        movieadded:  props.movies
+    }
+}
+    render(){
+        const[searchMovie, setSearchMovie] = React.useState("");
+        const[searchResults, setSearchResults] = React.useState([]);
+        useEffect(()=>{
+            const results = this.state.movieadded.filter(el =>
+                el.toString().toLowerCase().includes(searchMovie)
+            );
+            setSearchResults(results);
+        }, [searchMovie])
+        const handleChange = e =>{
+            setSearchMovie(e.target.value);
+        };   
     return (
         <div style={{backgroundColor:"#353636",height:"300px",position:"fixed"}}>
             <input type="text" 
@@ -32,6 +36,7 @@ const Filter = () => {
             <ReactStars size={20} style={{padding:20 , textAlign:"center"}} />
         </div>
     );
+}
 }
 
 export default Filter

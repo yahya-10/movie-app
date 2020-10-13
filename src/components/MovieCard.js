@@ -1,10 +1,11 @@
-import React , {Component} from 'react'
-import { Card, Image, Col, CardDeck } from "react-bootstrap";
-import ReactStars from 'react-rating-stars-component';
+import React , {Component,useState} from 'react'
+import { Card, CardDeck } from "react-bootstrap";
+import StarRatingComponent from 'react-star-rating-component';
 
 
-export default function MovieCard({card}) {
-
+export default function MovieCard({card,rate}) {
+    // const [rating, setRating] = useState(0)
+    
 
     return (
             <div className="movie-card">
@@ -16,7 +17,14 @@ export default function MovieCard({card}) {
                             <Card.Text style={{fontSize:"20px",color:"#e1e6e2"}}>{card.description}</Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <ReactStars size={24} count={5} />
+                        <StarRatingComponent 
+                            // name="rate" 
+                            // editing={false}
+                            // size={24}
+                            // renderStarIcon={() =>setRating(ratingValue)}
+                            // starCount={5}
+                            // value={rate}
+                        />
                         </Card.Footer>
                     </Card>
                 </CardDeck>
