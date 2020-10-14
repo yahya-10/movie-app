@@ -18,7 +18,7 @@ const AddMovie=({addMovie})=> {
 
         return (
             <div>
-                <button className="add-button" onClick={handleShow}>add Movie +</button>
+                <button className="add-button" onClick={handleShow} >add Movie <span>🢂</span></button>
                 <Modal show={show} onHide={handleClose} animation={false} >
         <Modal.Header closeButton>
             <Modal.Title>Add your movie</Modal.Title>

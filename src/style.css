@@ -3,16 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+*:focus {
+    outline: none;
+}
 html,body{
-    /* background: #c31432;  
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);
-    background: linear-gradient(to right, #240b36, #c31432);  */
-    background: black;
+    background: #5352ed;
 }
 .header{
     display: grid;
     grid-template-columns: auto auto;
     width: 100%;
+    background-color: #3742fa;
 }
 .navbar{
     display: grid;
@@ -30,7 +31,7 @@ li a{
     border-radius: 20px;
 }
 li a:hover{
-    background-color: #0033FF;
+    background-color: #ff6b81;
     color: black;
 }
 .title{
@@ -43,13 +44,13 @@ li a:hover{
 }
 h5{
     color: #e1e6e2;
-    /* color: black; */
     text-align: center;
     font-size: 10px;
 }
 .card{
-    border: 1px solid black;
+    border: 1px solid #3742fa;
     transition: .2s ease;
+    background-size: 100% 100%;
 }
 .card:hover{border: 2px solid #0033FF;
             transform: scale(1.05);}
@@ -57,7 +58,6 @@ h5{
 .movie-list{
     display: flex;
     justify-content: space-between;
-    /* margin-left: 250px; */
     margin: 0 20px 10px 200px;
     flex-wrap: wrap;
 }
@@ -78,16 +78,27 @@ h5{
 }
 
 .add-button{
-    margin-left: 20px;
+    margin: 20px;
     padding: 10px 40px;
-    background-color: rgba(247, 123, 7, 0.87);
+    background-color: #e1e6e2;
     color: rgb(21, 22, 22);
+    border: 1px solid #0033FF;
     border-radius: 20px;
-    outline: hidden;
     transition: .3s ease;
 }
 .add-button:hover{
-    background-color: #0033FF;
+    background-color: #ff6b81;
     color: rgb(245, 245, 252);
+}
+.add-search{
+    height: 300px;
+    background-color: #5352ed;
+    text-align: center;
+    position: fixed;
+    border-radius: 5px;
+}
+.search-bar{
+    border-radius: 30px;
+    padding: 8px;
 }
 
