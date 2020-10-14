@@ -10,7 +10,7 @@ export default function MovieCard({card,rate}) {
     return (
             <div className="movie-card">
                 <CardDeck style={{margin:10}}>
-                    <Card className="card" style={{backgroundColor:"#3742fa"}}>
+                    <Card className="card">
                         <Card.Img variant="top" src={card.posterUrl} style={{backgroundSize:"100% 100%",height:"300px",width:"223px"}} />
                         <Card.Body>
                             <Card.Title className="title" style={{fontSize:"30px",color:"#e1e6e2"}}>{card.title}</Card.Title>
