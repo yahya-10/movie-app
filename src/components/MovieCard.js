@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, CardDeck } from "react-bootstrap";
-import StarRatingComponent from 'react-star-rating-component';
+import Rating from './Rating'
 
 
 export default function MovieCard({card,movies}) {
@@ -16,13 +16,7 @@ export default function MovieCard({card,movies}) {
                             <Card.Text style={{fontSize:"20px",color:"#e1e6e2"}}>{card.description}</Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                        <StarRatingComponent 
-                            name="rate" 
-                            editing={false}
-                            renderStarIcon={() => <span style={{fontSize:"24px"}}>☆</span>}
-                            starCount={5}
-                            value={5}
-                        />
+                        <Rating rate={card.rate} />
                         </Card.Footer>
                     </Card>
                 </CardDeck>

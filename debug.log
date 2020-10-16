@@ -100,3 +100,28 @@
 [1014/224315.035:ERROR:crash_report_database_win.cc(457)] unexpected header
 [1014/225815.049:ERROR:crash_report_database_win.cc(457)] unexpected header
 [1014/231315.104:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/093242.217:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/094242.247:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/094242.247:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
+[1015/094242.247:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/094242.247:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/094742.367:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/100242.445:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/101742.470:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/103242.489:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/104742.574:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/110242.630:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/111742.686:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/113242.764:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/114742.919:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/120243.035:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/121743.154:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/123243.259:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/124743.441:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/163251.451:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/164251.739:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/164251.739:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
+[1015/164251.741:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/164251.741:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/164751.662:ERROR:crash_report_database_win.cc(457)] unexpected header
+[1015/170251.812:ERROR:crash_report_database_win.cc(457)] unexpected header
