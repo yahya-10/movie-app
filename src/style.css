@@ -34,6 +34,19 @@ li a:hover{
     background-color: #ff6b81;
     color: black;
 }
+.home{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #e1e6e2;
+    font-family: 'Oswald', sans-serif;
+    transition: .3s;
+    padding: 15px 5px;
+    border-radius: 20px;
+}
+/* .home:hover{
+    background-color: #ff6b81;
+    color: black;
+} */
 .title{
     color: #e1e6e2;
     font-size: 60px;
