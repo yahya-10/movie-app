@@ -65,7 +65,7 @@ const App=()=>{
   ])
 
   const addMovie=(x)=>{
-    setMovies([...movies,x])
+    setMovies([...movies,x])    
   }
   
   const[searchMovie, setSearchMovie] = useState("");
@@ -89,7 +89,8 @@ const App=()=>{
           <MovieList movies={movies.filter( 
             movie => movie.title.toLowerCase().includes(searchMovie.toLowerCase()) && movie.rate >=search)}
           />
-          <Route exact path="/movie/:id" component={MovieDetail}></Route>
+          {/* <Route exact path="/" component={MovieList} /> */}
+          <Route exact path="/movieList/:id" component = {MovieDetail} />
         <Footer />
       </div>
     </Router>

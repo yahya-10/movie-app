@@ -39,7 +39,7 @@ li a:hover{
     letter-spacing: 1px;
     color: #e1e6e2;
     font-family: 'Oswald', sans-serif;
-    transition: .3s;
+    /* transition: .3s; */
     padding: 15px 5px;
     border-radius: 20px;
 }

@@ -11,7 +11,7 @@ const Header = () => {
             <h2 className="title">MovieBook</h2>
             <ul className="navbar">
             <Link className="home" to = '/' >
-                {/* <li className="home"><a href="#">Home</a></li> */}Home
+                Home
             </Link>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Box Office</a></li>
