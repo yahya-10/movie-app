@@ -10,7 +10,7 @@ const Header = () => {
             
             <h2 className="title">MovieBook</h2>
             <ul className="navbar">
-            <Link className="home" to = '/' >
+            <Link className="home" exact={true} to = '/' >
                 Home
             </Link>
                 <li><a href="#">News</a></li>

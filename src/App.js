@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import Header from './components/Header';
 import Footer from './components/Footer'
 import MovieList from './components/MovieList'
 import AddMovie from './components/AddMovie'
-import MovieDetail from './components/MovieDetail'
 import './style.css';
 
 import Joker from './components/image/Joker.jpg'
@@ -67,13 +66,13 @@ const App=()=>{
   const addMovie=(x)=>{
     setMovies([...movies,x])    
   }
-  
+
   const[searchMovie, setSearchMovie] = useState("");
 
   const[search, setSearch] = useState("");
 
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <Header />
         <div className="add-search">
@@ -87,13 +86,11 @@ const App=()=>{
           />
         </div>
           <MovieList movies={movies.filter( 
-            movie => movie.title.toLowerCase().includes(searchMovie.toLowerCase()) && movie.rate >=search)}
+            movie => movie.title.toLowerCase().includes(searchMovie.toLowerCase().trim()) && movie.rate >=search)}
           />
-          {/* <Route exact path="/" component={MovieList} /> */}
-          <Route exact path="/movieList/:id" component = {MovieDetail} />
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   ); 
 }
 
