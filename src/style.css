@@ -39,14 +39,9 @@ li a:hover{
     letter-spacing: 1px;
     color: #e1e6e2;
     font-family: 'Oswald', sans-serif;
-    /* transition: .3s; */
     padding: 15px 5px;
     border-radius: 20px;
 }
-/* .home:hover{
-    background-color: #ff6b81;
-    color: black;
-} */
 .title{
     color: #e1e6e2;
     font-size: 60px;
@@ -75,7 +70,7 @@ h5{
 .movie-list{
     display: flex;
     justify-content: space-between;
-    margin: 0 20px 10px 200px;
+    margin: 0 20px 10px 20px;
     flex-wrap: wrap;
 }
 .title{
@@ -108,14 +103,16 @@ h5{
     color: rgb(245, 245, 252);
 }
 .add-search{
-    height: 300px;
     background-color: #34495e;
+    display: flex;
     text-align: center;
-    position: fixed;
     border-radius: 5px;
+    justify-content: center;
 }
 .search-bar{
     border-radius: 30px;
-    padding: 8px;
+    width: 50%;
+    height: 40px;
+    margin-top: 20px;
 }
 

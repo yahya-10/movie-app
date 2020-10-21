@@ -1,25 +1,34 @@
 import React from 'react'
-import YouTube from 'react-youtube';
+import { useParams, Link } from 'react-router-dom';
+import ReactPlayer from 'react-player'
 
 
 
-const MovieDetail = ({movieData, match}) =>
+const MovieDetail = ({movies}) =>
 {
-    
-    const card = movieData.find((id) => id === match.params.movieId); 
+    const { id } = useParams();
+    const movie = movies.find(movie => movie.id == id);
+    var movieData;
+
+    if(movie)
+    movieData=(<div className="details">
+    <div className="container">
+        <div className="title">
+            <h2>{movie.title}</h2>
+        </div>
+        <div className="description">
+            <p style={{color:"red"}}>{movie.descPar}</p>
+        </div>
+        <ReactPlayer url={movie.trailerVid} /> 
+    </div>
+</div>);
+else movieData = (<h2>Sorry Movie doesn't exist</h2>);
 
     return (
-        <div className="details">
-            <div className="container">
-                <div className="title">
-                    <h2>{card.title}</h2>
-                </div>
-                <div className="description">
-                    <p>{card.descPar}</p>
-                </div>
-                <YouTube>{card.trailerVid}</YouTube>
-                <button>Back to Home</button>
-            </div>
+        <div>
+            {movieData}
+            <Link to = '/' ><button 
+            style={{backgroundColor:"#9980FA", color:"black",padding:5,borderRadius:20}}> Back to Home </button> </Link>
         </div>
     )
 }

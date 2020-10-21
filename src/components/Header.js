@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -10,9 +9,6 @@ const Header = () => {
             
             <h2 className="title">MovieBook</h2>
             <ul className="navbar">
-            <Link className="home" exact={true} to = '/' >
-                Home
-            </Link>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Box Office</a></li>
                 <li><a href="#">Subscribe</a></li>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Header from './components/Header';
 import Footer from './components/Footer'
 import MovieList from './components/MovieList'
 import AddMovie from './components/AddMovie'
+import MovieDetail from './components/MovieDetail'
 import './style.css';
 
 import Joker from './components/image/Joker.jpg'
@@ -12,6 +13,7 @@ import TheIrishman from './components/image/the-irishman.jpg'
 import HarryPotter from './components/image/harry-potter.jpg'
 import TheMatrix from './components/image/the-matrix.jpg'
 import ReactStars from "react-rating-stars-component";
+
 
 
 const App=()=>{
@@ -72,7 +74,7 @@ const App=()=>{
   const[search, setSearch] = useState("");
 
   return (
-    <BrowserRouter>
+    
       <div className="App">
         <Header />
         <div className="add-search">
@@ -88,9 +90,12 @@ const App=()=>{
           <MovieList movies={movies.filter( 
             movie => movie.title.toLowerCase().includes(searchMovie.toLowerCase().trim()) && movie.rate >=search)}
           />
+          <Switch>
+          <Route exact path="/movies/:id" render={(props)=>
+          <MovieDetail {...props} movies={movies}/>} />
+          </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
   ); 
 }
 

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Card, CardDeck } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 import Rating from './Rating'
-import { Route, Link } from 'react-router-dom'
-import MovieDetail from './MovieDetail'
+
+
 
 
 
@@ -11,7 +12,7 @@ export default function MovieCard({card}) {
 
     return (
             <div className="movie-card">
-                <Link to = {`movie/${card.id}`} style={{textDecoration:"none"}}>
+                <Link to = {`/movies/${card.id}`} style={{textDecoration:"none"}}>
                 <CardDeck style={{margin:10}}>
                     <Card className="card">
                         <Card.Img variant="top" src={card.posterUrl} style={{backgroundSize:"100% 100%",height:"300px",width:"223px"}} />
@@ -25,9 +26,6 @@ export default function MovieCard({card}) {
                     </Card>
                 </CardDeck>
                 </Link>
-
-                <Route exact path={`movie/:movieId`} render={(match) => 
-                <MovieDetail movieData={card} {...match} />} />
             </div>
     )
     
